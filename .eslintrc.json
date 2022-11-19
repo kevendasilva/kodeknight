@@ -12,7 +12,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugin": [
+  "plugins": [
     "eslint-plugin-import-helpers",
     "prettier",
     "import"
@@ -26,21 +26,17 @@
         "arrowParens": "always"
       }
     ],
-    "indent": [
+    "indent": ["error", 2],
+    "no-multi-spaces": ["error"],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "import/extensions": [
       "error",
-      2
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
+      "ignorePackages",
+      {
+        "js": "always"
+      }
     ],
     "import-helpers/order-imports": [
       "warn",
