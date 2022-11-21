@@ -7,10 +7,22 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "apexcharts.min", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/navbar" %>
+    <%= render "layouts/sidebar" %>
+
+    <main id="main" class="main">
+      <section class="section dashboard">
+        <div class="row">
+          <%= yield %>
+        </div>
+      </section>
+    </main>
+
+    <%= javascript_include_tag "niceadmin", "data-turbo-track": "reload" %>
   </body>
 </html>
