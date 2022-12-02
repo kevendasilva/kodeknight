@@ -17,3 +17,203 @@
 
 @import "bootstrap";
 @import "niceadmin";
+
+// Cores
+$ebony-clay: #1E242C;
+$outer-space: #2C343C;
+$abbey: #494E54;
+$bright-gray: #343C44;
+$purple: #3E3A97;
+$dark: #151B1F;
+$white: #F8F8F8;
+
+.white {
+  color: $white !important;
+}
+
+// Geral
+body {
+  background: $dark;
+}
+
+// Layouts
+#header {
+  height: 80px;
+}
+
+#sidebar {
+  top: 80px;
+}
+
+.logo {
+  width: fit-content;
+
+  img {
+    max-height: 48px;
+  }
+}
+
+#header, #sidebar {
+  background: $ebony-clay;
+}
+
+#main {
+  margin-top: 80px;
+}
+
+.card {
+  background: $ebony-clay;
+}
+
+.header-nav .dropdown-toggle:hover {
+  cursor: pointer;
+}
+
+.dropdown-menu.dropdown-menu-end.dropdown-menu-arrow.profile.show {
+  background: $ebony-clay;
+  border: solid 1px $abbey;
+}
+
+.dropdown-menu.dropdown-menu-end.dropdown-menu-arrow.profile.show::before {
+  background: $ebony-clay;
+  border: solid 1px $abbey;
+}
+
+.header-nav .profile .dropdown-item:hover {
+  background-color: $ebony-clay;
+}
+
+a {
+  color: $white !important;
+}
+
+#sidebar .nav-link {
+  background: $ebony-clay !important;
+  border: 1px solid $abbey !important;
+}
+
+// Efeitos
+.drop-shadow {
+  box-shadow: 0px 2px 32px rgba(0, 0, 0, 0.1);
+}
+
+// Icons
+i {
+  color: $white !important;
+}
+
+// Fontes
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 97px;
+  line-height: 118px;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 61px;
+  line-height: 74px;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 41px;
+  letter-spacing: 0.25px;
+}
+
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+
+.subtitle-1 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+}
+
+.subtitle-2 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1px;
+}
+
+.body-1 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+}
+
+.body-2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.button {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1.25px;
+}
+
+.caption {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.4px;
+}
+
+.overline {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 1.5px;
+}
