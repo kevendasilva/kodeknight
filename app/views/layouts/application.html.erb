@@ -23,6 +23,12 @@
     <main id="main" class="main">
       <section class="section dashboard">
         <div class="row">
+          <% if notice %>
+            <div class="alert alert-success" role="alert">
+              <%= notice %>
+            </div>
+          <% end %>
+
           <%= yield %>
         </div>
       </section>

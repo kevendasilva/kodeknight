@@ -29,3 +29,42 @@
   padding: 0 !important;
   max-width: 100% !important;
 }
+
+.trix-button-group button {
+  background: white;
+}
+
+.trix-content {
+  color: white !important;
+}
+
+.trix-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  margin-bottom: 24px;
+  line-height: 41px;
+  letter-spacing: 0.25px;
+}
+
+.trix-content div, .trix-content li {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+}
+
+.trix-content strong {
+  color: #3E3A97;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+}
+
+.trix-content li {
+  margin-left: 2em;
+}

@@ -1,0 +1,35 @@
+<%= form_with(model: project) do |form| %>
+  <% if project.errors.any? %>
+    <div style="color: red">
+      <ul>
+        <% project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-3">
+    <%= form.label :title, class: "white body-1", style: "display: block" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="my-3">
+    <%= form.label :kind, class: "white body-1", style: "display: block" %>
+    <%= form.select :kind, Project.kinds.keys.map { |kind| [kind.titleize, kind] }, {}, class: "form-select" %>
+  </div>
+
+  <div class="my-3">
+    <%= form.label :resume, class: "white body-1", style: "display: block" %>
+    <%= form.text_area :resume, class: "form-control" %>
+  </div>
+
+  <div class="my-3">
+    <%= form.label :content, class: "white body-1", style: "display: block" %>
+    <%= form.rich_text_area :content, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit submit[:text], class: "btn btn-success body-1" %>
+  </div>
+<% end %>

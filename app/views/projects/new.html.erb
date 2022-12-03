@@ -1,0 +1,14 @@
+<%=
+  render "layouts/page-header",
+  content: "New project"
+%>
+
+<%= render "layouts/card" do %>
+  <%= render "form", project: @project, submit: submit = {text: "Create project"} %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to projects", projects_path, class: "btn btn-secondary body-1" %>
+  </div>
+<% end %>

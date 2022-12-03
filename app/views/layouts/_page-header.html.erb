@@ -1,0 +1,7 @@
+<div class="page-header d-flex align-items-center justify-content-between mb-3">
+  <h3 class="white h3"><%= content %></h3>
+
+  <% if defined? button %>
+    <%= link_to button[:text], button[:path], class: button[:classes] %>
+  <% end %>
+</div>

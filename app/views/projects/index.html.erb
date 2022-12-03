@@ -1,0 +1,15 @@
+<%=
+  render "layouts/page-header",
+  content: "Projects",
+  button: button = {
+    text: "New project",
+    path: new_project_path,
+    classes: "btn btn-success body-1"
+  }
+%>
+
+<div id="projects">
+  <% @projects.each do |project| %>
+    <%= render project %>
+  <% end %>
+</div>
