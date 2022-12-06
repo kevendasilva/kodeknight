@@ -35,11 +35,13 @@
         </section>
       </main>
     <% else %>
-      <%= render "layouts/visitor_navbar" %>
+      <%= render "layouts/visitor_navbar"%>
 
-      <section class="section">
+      <section class="section visitor">
         <%= yield %>
       </section>
+
+      <%= render "layouts/footer" %>
     <% end %>
 
     <%= javascript_include_tag "niceadmin", "data-turbo-track": "reload" %>

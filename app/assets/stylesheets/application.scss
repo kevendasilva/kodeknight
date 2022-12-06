@@ -34,7 +34,7 @@ $white: #F8F8F8;
 
 // Geral
 body {
-  background: $dark;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), $dark;
 }
 
 // Layouts
@@ -237,4 +237,20 @@ i {
 nav.visitor {
   background-color: $ebony-clay;
   height: 80px;
+
+  .itens {
+    width: 480px;
+    align-items: center;
+  }
+}
+
+footer {
+  align-items: center;
+  background: $ebony-clay;
+  height: 60px;
+
+  .links .body-1 {
+    color: $purple !important;
+    font-weight: 700 !important;
+  }
 }

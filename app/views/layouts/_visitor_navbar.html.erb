@@ -1,5 +1,13 @@
 <nav class="navbar visitor drop-shadow navbar-expand-sm justify-content-center">
-  <a class="navbar-brand m-0" href="<%= root_path %>">
-    <%= image_tag "icons/mini-white.svg" %>
-  </a>
+  <% if controller_name != 'application' %>
+    <%= render "layouts/brand" %>
+  <% else %>
+    <div class="d-flex justify-content-between itens">
+      <%= link_to "Inícios", root_path, class: "body-1" %>
+      <%= link_to "Sobre mim", "#sobre-mim", class: "body-1" %>
+      <%= render "layouts/brand" %>
+      <%= link_to "Projetos", "#projetos", class: "body-1" %>
+      <%= link_to "Formação", "#formacao", class: "body-1" %>
+    </div>
+  <% end %>
 </nav>
