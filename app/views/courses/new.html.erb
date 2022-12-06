@@ -1,0 +1,14 @@
+<%=
+  render "layouts/page-header",
+  content: "New course"
+%>
+
+<%= render "layouts/card" do %>
+  <%= render "form", course: @course, submit: submit = {text: "Create course"} %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to courses", courses_path, class: "btn btn-secondary body-1"  %>
+  </div>
+<% end %>

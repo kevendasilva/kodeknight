@@ -1,0 +1,30 @@
+<%= form_with(model: course) do |form| %>
+  <% if course.errors.any? %>
+    <div style="color: red">
+      <ul>
+        <% course.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-3">
+    <%= form.label :name, class: "white body-1", style: "display: block" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="my-3">
+    <%= form.label :start_date, class: "white body-1", style: "display: block" %>
+    <%= form.date_field :start_date, class: "form-control" %>
+  </div>
+
+  <div class="my-3">
+    <%= form.label :end_date, class: "white body-1", style: "display: block" %>
+    <%= form.date_field :end_date, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit submit[:text], class: "btn btn-success body-1" %>
+  </div>
+<% end %>
