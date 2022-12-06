@@ -17,22 +17,30 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
-    <%= render "layouts/sidebar" %>
+    <% if admin_signed_in? %>
+      <%= render "layouts/navbar" %>
+      <%= render "layouts/sidebar" %>
 
-    <main id="main" class="main">
-      <section class="section dashboard">
-        <div class="row">
-          <% if notice %>
-            <div class="alert alert-success" role="alert">
-              <%= notice %>
-            </div>
-          <% end %>
+      <main id="main" class="main">
+        <section class="section dashboard">
+          <div class="row">
+            <% if notice %>
+              <div class="alert alert-success" role="alert">
+                <%= notice %>
+              </div>
+            <% end %>
 
-          <%= yield %>
-        </div>
+            <%= yield %>
+          </div>
+        </section>
+      </main>
+    <% else %>
+      <%= render "layouts/visitor_navbar" %>
+
+      <section class="section">
+        <%= yield %>
       </section>
-    </main>
+    <% end %>
 
     <%= javascript_include_tag "niceadmin", "data-turbo-track": "reload" %>
   </body>

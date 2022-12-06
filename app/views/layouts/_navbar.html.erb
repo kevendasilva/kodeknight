@@ -22,7 +22,7 @@
             <hr class="dropdown-divider">
           </li>
           <li>
-            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+            <a class="dropdown-item d-flex align-items-center" href="<%= edit_admin_registration_path %>">
               <i class="bi bi-person"></i>
               <span>My Profile</span>
             </a>
@@ -31,10 +31,10 @@
             <hr class="dropdown-divider">
           </li>
           <li>
-            <a class="dropdown-item d-flex align-items-center" href="#">
+            <%= button_to destroy_admin_session_path, method: :delete, class: "dropdown-item d-flex align-items-center" do %>
               <i class="bi bi-box-arrow-right"></i>
-              <span>Sign Out</span>
-            </a>
+              <span class="white">Sign Out</span>
+            <% end %>
           </li>
         </ul>
       </li>
