@@ -17,7 +17,9 @@
   </head>
 
   <body>
-    <% if admin_signed_in? %>
+    <% path = "#{controller_name}##{action_name}" %>
+
+    <% if admin_signed_in? and (path != 'application#index' and path != 'application#projetos') %>
       <%= render "layouts/navbar" %>
       <%= render "layouts/sidebar" %>
 
@@ -37,11 +39,15 @@
     <% else %>
       <%= render "layouts/visitor_navbar"%>
 
-      <section class="section visitor">
+      <% if devise_controller? %>
+        <section class="container">
+          <%= yield %>
+        </section>
+      <% else %>
         <%= yield %>
-      </section>
+      <% end %>
 
-      <%= render "layouts/footer" %>
+      <%= render "layouts/footer" if controller_name == 'application' %>
     <% end %>
 
     <%= javascript_include_tag "niceadmin", "data-turbo-track": "reload" %>
