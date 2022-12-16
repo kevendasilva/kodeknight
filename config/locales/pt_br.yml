@@ -1,0 +1,12 @@
+pt_br:
+  blog_title: "Kode Knight"
+  page_title:
+    controllers:
+      edit:
+        success: "Edit %{resource} - Dashboard"
+        error: "Error when editing %{resource} - Dashboard"
+      index: "%{resource} - Dashboard"
+      new:
+        success: "New %{resource} - Dashboard"
+        error: "Error creating %{resource} - Dashboard"
+      show: "%{resource} - Dashboard"
