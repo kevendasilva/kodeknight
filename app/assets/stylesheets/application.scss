@@ -30,6 +30,7 @@ $white: #F8F8F8;
 
 html {
   scroll-behavior: smooth !important;
+  scroll-padding-top: 4em;
 }
 
 .white {
@@ -332,5 +333,43 @@ footer {
 
   .picture {
     border-radius: 100%;
+  }
+}
+
+#project-content {
+  .content {
+    border: 1px solid $abbey;
+    border-radius: 7.6px;
+    padding: 40px;
+  }
+}
+
+#navigation {
+  .links {
+    margin: 0;
+  }
+
+  .title {
+    margin-bottom: 9px;
+  }
+
+  .topics {
+    background: $ebony-clay;
+    border-radius: 7.6px;
+    padding: 20px;
+  }
+
+  ul {
+    border-left: 1px solid $white;
+    padding-left: 12px;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }

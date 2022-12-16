@@ -11,6 +11,8 @@
   <div id="<%= project_slug + "-collapse" %>" class="accordion-collapse collapse show" aria-labelledby="<%= project_slug + "-heading" %>">
     <div class="accordion-body">
       <%= project.resume %>
+
+      <%= link_to "Saiba mais.", projeto_path(slug: project_slug), target: "_blank", class: "body-1 purple" %>
     </div>
   </div>
 </div>

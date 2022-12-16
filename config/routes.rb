@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'application#index'
+  get '/projeto/:slug', to: 'application#projeto', as: 'projeto'
 
   scope '/pessoa_humana' do
     devise_for :admins, controllers: {
