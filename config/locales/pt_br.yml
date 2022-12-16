@@ -1,5 +1,19 @@
 pt_br:
   blog_title: "Kode Knight"
+  date:
+    month:
+      jan: "jan"
+      feb: "fev"
+      mar: "mar"
+      apr: "abr"
+      may: "mai"
+      june: "jun"
+      july: "jul"
+      aug: "ago"
+      sept: "set"
+      oct: "out"
+      nov: "nov"
+      dec: "dez"
   models:
     project:
       kind:
