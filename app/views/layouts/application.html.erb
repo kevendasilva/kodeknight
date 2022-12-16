@@ -23,7 +23,7 @@
   <body>
     <% path = "#{controller_name}##{action_name}" %>
 
-    <% if admin_signed_in? and (path != 'application#index' and path != 'application#projetos') %>
+    <% if admin_signed_in? and (path != 'application#index' and path != 'application#projeto') %>
       <%= render "layouts/navbar" %>
       <%= render "layouts/sidebar" %>
 
