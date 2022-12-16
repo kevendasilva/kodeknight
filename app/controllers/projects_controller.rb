@@ -4,19 +4,25 @@ class ProjectsController < ApplicationController
   # GET /projects or /projects.json
   def index
     @projects = Project.all
+
+    @page_title = I18n.t("page_title.controllers.index", resource: "Projects")
   end
 
   # GET /projects/1 or /projects/1.json
   def show
+    @page_title = I18n.t("page_title.controllers.show", resource: "#{@project.title} project")
   end
 
   # GET /projects/new
   def new
     @project = Project.new
+
+    @page_title = I18n.t("page_title.controllers.new.success", resource: "project")
   end
 
   # GET /projects/1/edit
   def edit
+    @page_title = I18n.t("page_title.controllers.edit.success", resource: "project")
   end
 
   # POST /projects or /projects.json
@@ -28,6 +34,8 @@ class ProjectsController < ApplicationController
         format.html { redirect_to project_url(@project), notice: "Project was successfully created." }
         format.json { render :show, status: :created, location: @project }
       else
+        @page_title = I18n.t("page_title.controllers.new.error", resource: "project")
+
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
@@ -41,6 +49,8 @@ class ProjectsController < ApplicationController
         format.html { redirect_to project_url(@project), notice: "Project was successfully updated." }
         format.json { render :show, status: :ok, location: @project }
       else
+        @page_title = I18n.t("page_title.controllers.edit.error", resource: "project")
+
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
