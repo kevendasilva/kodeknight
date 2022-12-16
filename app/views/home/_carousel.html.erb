@@ -1,0 +1,30 @@
+<div class="owl-carousel owl-theme py-4">
+  <% relative_path = "app/assets/images/" %>
+  <% images = Dir.glob("#{relative_path}index/carousel/*") %>
+  <% images.each do |image| %>
+    <% image.slice! relative_path %>
+
+    <div class="item">
+      <%= image_tag image %>
+    </div>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $('.owl-carousel').owlCarousel({
+    dots: false,
+    loop: true,
+    margin: 100,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 6
+      }
+    }
+  });
+</script>

@@ -1,0 +1,16 @@
+<% project_slug = project.title.downcase.parameterize %>
+
+<div class="accordion-item">
+  <h2 class="accordion-header" id="<%= project_slug + "-heading" %>">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#<%= project_slug + "-collapse" %>" aria-expanded="true" aria-controls="<%= project_slug + "-collapse" %>">
+      <div class="white h6 m-0">
+        <%= project.title %> <span class="badge button mx-2"><%= project.kind.upcase %></span>
+      </div>
+    </button>
+  </h2>
+  <div id="<%= project_slug + "-collapse" %>" class="accordion-collapse collapse show" aria-labelledby="<%= project_slug + "-heading" %>">
+    <div class="accordion-body">
+      <%= project.resume %>
+    </div>
+  </div>
+</div>

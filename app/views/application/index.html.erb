@@ -1,0 +1,100 @@
+<div id="inicio" class="container p-5">
+  <div class="row px-5 py-3 align-middle">
+    <div class="col-lg-7 my-auto">
+      <p class="h1 white">
+        Seja <br>
+        bem-vindo(a) <br>
+        <p class="h3 purple" style="font-weight: 500">ao meu portfólio</p>
+      </p>
+    </div>
+    <div class="col-lg-5 text-center">
+      <%= image_tag "index/tree.svg", class: "img-fluid" %>
+    </div>
+  </div>
+</div>
+
+<div id="sobre-mim" class="container px-5">
+  <div class="row px-5 py-4">
+    <div class="col-lg-12 p-5">
+      <p class="h4 white mb-3">Sobre mim</p>
+      <p class="body-1 white">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet gravida magna non gravida. Donec nec ex in ligula pharetra volutpat. In et ligula efficitur leo interdum aliquam nec id mauris. Duis libero leo, hendrerit at viverra sit amet, ultricies a metus. Integer viverra ullamcorper risus, ut suscipit mauris. Sed vel varius justo. Cras efficitur mauris quam, at vulputate odio mattis in. Maecenas mauris orci, dictum vitae elementum quis, pharetra sit amet orci. Nullam interdum, eros in congue sagittis, lorem urna mollis lorem, ac tempus libero justo vitae mauris.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="projetos" class="container px-5">
+  <div class="row px-5 py-4">
+    <div class="col-lg-12 p-5">
+      <p class="h4 white mb-3">Projetos</p>
+      <p class="body-1 white pb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet gravida magna non gravida. Donec nec ex in ligula pharetra volutpat. In et ligula efficitur leo interdum aliquam nec id mauris.
+      </p>
+
+      <div class="accordion" id="accordion-projects">
+        <% @projects.each do |project| %>
+          <%= render "home/project-accordion", project: project %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="formacao" class="container px-5">
+  <div class="row px-5 py-4">
+    <div class="col-lg-12 p-5">
+      <p class="h4 white mb-3">Formação</p>
+      <p class="body-1 white mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet gravida magna non gravida. Donec nec ex in ligula pharetra volutpat. In et ligula efficitur leo interdum aliquam nec id mauris. Duis libero leo, hendrerit at viverra sit amet, ultricies a metus. Integer viverra ullamcorper risus, ut suscipit mauris. Sed vel varius justo. Cras efficitur mauris quam, at vulputate odio mattis in. Maecenas mauris orci, dictum vitae elementum quis, pharetra sit amet orci. Nullam interdum, eros in congue sagittis, lorem urna mollis lorem, ac tempus libero justo vitae mauris.
+      </p>
+      <ul>
+        <% @courses.each do |course| %>
+          <%= render "home/course", course: course %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="tecnologias" class="container px-5">
+  <div class="row px-5 py-2">
+    <div class="col-lg-12 p-5">
+      <p class="h4 white text-center fw-semibold mb-3">Tecnologias</p>
+      <p class="body-1 white mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet gravida magna non gravida. Donec nec ex in ligula pharetra volutpat. In et ligula efficitur leo interdum aliquam nec id mauris.
+      </p>
+
+      <%= render "home/carousel" %>
+    </div>
+  </div>
+</div>
+
+<div data-controller="index" id="github" class="container px-5 mb-3">
+  <div class="row justify-content-center px-5 py-2">
+    <div class="col-lg-6 px-5">
+      <div class="card">
+        <div class="card-body p-3">
+          <div id="spinner" class="d-flex justify-content-center p-5">
+            <div class="spinner-border text-light" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <div id="conta" class="d-none">
+            <div class="row px-5 py-3 align-items-center">
+              <div class="col-lg-4 px-1 text-center">
+                <img class="picture img-fluid mb-3" src="">
+                <a class="username purple fw-medium body-1"></a>
+              </div>
+              <div class="col-lg-8 px-4">
+                <p class="body-1 white"><span class="fw-bold">Nome:</span> <span class="name"></span></p>
+                <p class="body-1 white bio"></p>
+                <p class="body-1 white"><span class="fw-bold">Desde:</span> <span class="date"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

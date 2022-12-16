@@ -1,9 +1,9 @@
-<nav class="navbar visitor drop-shadow navbar-expand-sm justify-content-center">
+<nav id="visitor-navbar" class="navbar <%= additional_class %> visitor drop-shadow justify-content-center">
   <% if controller_name != 'application' %>
     <%= render "layouts/brand" %>
   <% else %>
     <div class="d-flex justify-content-between itens">
-      <%= link_to "Inícios", root_path, class: "body-1" %>
+      <%= link_to "Início", root_path, class: "body-1" %>
       <%= link_to "Sobre mim", "#sobre-mim", class: "body-1" %>
       <%= render "layouts/brand" %>
       <%= link_to "Projetos", "#projetos", class: "body-1" %>

@@ -1,0 +1,6 @@
+<li>
+  <p class="body-1 white m-0">
+    <%= course.name %> -
+    <%= course.start_date.strftime("%b/%Y") %> | <%= course.end_date.nil? ? "Now":course.end_date.strftime("%b/%Y") %>
+  </p>
+</li>

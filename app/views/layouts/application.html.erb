@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "apexcharts.min", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "owl.carousel.min.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "owl.theme.default.min.css", "data-turbo-track": "reload" %>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <%= javascript_include_tag "owl.carousel.min.js", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
     <%= favicon_link_tag asset_path('icons/favicon.ico') %>
@@ -37,7 +41,8 @@
         </section>
       </main>
     <% else %>
-      <%= render "layouts/visitor_navbar"%>
+      <% additional_class = devise_controller? ? '':'navbar-fixed-top' %>
+      <%= render "layouts/visitor_navbar", additional_class: additional_class %>
 
       <% if devise_controller? %>
         <section class="container">
