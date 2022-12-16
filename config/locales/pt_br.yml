@@ -1,5 +1,10 @@
 pt_br:
   blog_title: "Kode Knight"
+  models:
+    project:
+      kind:
+        system: "Sistema"
+        website: "Site"
   page_title:
     controllers:
       edit:
