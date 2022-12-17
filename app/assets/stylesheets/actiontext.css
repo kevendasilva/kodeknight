@@ -38,6 +38,22 @@
   color: white !important;
 }
 
+.trix-content figure.attachment img {
+  margin-bottom: 12px;
+}
+
+.trix-content .attachment__caption {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px !important;
+  line-height: 18px !important;
+  letter-spacing: 0.4px;
+
+  color: #FFFFFF !important;
+  margin-bottom: 24px;
+}
+
 .trix-content h1 {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
