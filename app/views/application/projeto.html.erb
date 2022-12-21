@@ -1,9 +1,22 @@
+<% relative_path = 'app/assets/images/' %>
+<% images = Dir.glob("#{relative_path}projects/*") %>
+<% images.each { |image| image.slice! relative_path } %>
+<% project_slug = @project.title.parameterize %>
+<% project_image_path = "projects/#{project_slug}.png" %>
+
+<% if images.include? project_image_path %>
+  <figure class="attachment d-none">
+    <%= image_tag project_image_path %>
+    <figcaption class="attachment__caption"></figcaption>
+  </figure>
+<% end %>
+
 <section class="container py-5">
   <div class="row px-5 pt-5">
     <div class="col px-0 py-3">
       <p class="purple subtitle-1">
         <%= link_to "Projetos", "/#projetos", class: "purple subtitle-1" %> /
-        <span class="fw-bold"><%= @project.title%></span>
+        <span class="fw-bold"><%= @project.title %></span>
       </p>
     </div>
   </div>

@@ -3,6 +3,31 @@ var titles = content.getElementsByTagName('h1');
 var topics = document.getElementsByClassName('topics')[0];
 var links = topics.getElementsByClassName('links')[0];
 var spinner = document.getElementById('spinner');
+var imageCaption = document.getElementsByTagName('em')[0];
+var figure = document.getElementsByClassName('attachment')[0];
+
+if (imageCaption) {
+  var imageContainer = imageCaption.parentElement;
+
+  if (figure) {
+    var newImageCaption = document.getElementsByClassName(
+      'attachment__caption',
+    )[0];
+
+    newImageCaption.innerText = imageCaption.innerText;
+    imageContainer.appendChild(figure);
+    imageContainer.classList.add('text-center');
+    figure.classList.remove('d-none');
+
+    imageCaption.remove();
+  } else {
+    imageContainer.remove();
+  }
+} else {
+  if (figure) {
+    figure.remove();
+  }
+}
 
 function slugfy(text, separator = '-') {
   return text
